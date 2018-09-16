@@ -45,8 +45,8 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  cart_cons = consolidate_cart(cart: cart)
-  cart_coup = apply_coupons(cart:cart_cons, coupons:coupons)
+  cart_hash = consolidate_cart(cart: cart)
+  cart_coup = apply_coupons(cart:cart_hash, coupons:coupons)
   cart_check = apply_clearance(cart: cart_coup)
   total = 0
   cart_check.each do |item, attribute|
