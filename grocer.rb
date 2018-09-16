@@ -54,5 +54,5 @@ def checkout(cart, coupons)
       total += (info_hash[:price] * info_hash[:count])
     end
   end
-   total > 100 ? total * 0.90 : total
+   return total > 100 ? total * 0.90 : total
 end
